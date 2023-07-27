@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: monospace;
+    background-color:lightskyblue;
+}
+
+.header {
+    display: flex;
+    height: 10vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bolder;
+    background-color: darkslateblue;
+    color: white;
+    margin: 0;
+}
+
+.display {
+    display: flex;
+    height: 12vh;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.your-choice,
+.cmp-choice {
+    width: 500px;
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+}
+
+.scoreboard {
+    display: flex;
+    height: 20vh;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 50px;
+}
+
+.buttons {
+    display: flex;
+    height: 40vh;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 5px;
+    border: black solid 2px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.reset {
+    display: flex;
+    height: 3vh;
+    width: 3vw;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 48.5vw;
+}
+
+.your-score,
+.cmp-score {
+    font-size: 100px;
+}
+
+.result {
+    display: flex;
+    width: 100px;
+    font-size: 50px;
+    justify-content: center;
+}

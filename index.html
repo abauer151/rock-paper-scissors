@@ -3,101 +3,30 @@
     <head>
         <meta charset="UTF-8" lang="en">
         <title>Rock Paper Scissors</title>
+        <script src = "script.js" defer></script>
+        <link rel = "stylesheet" href = "style.css">
     </head>
 
     <body>
-        <script>
-            function getComputerChoice()
-            {
-                let randomInt = Math.floor(Math.random() * 3);
-                switch(randomInt) 
-                {
-                    case 0:
-                        return "Rock";
-                    case 1: 
-                        return "Paper";
-                    case 2:
-                        return "Scissors";
-                }
-            }
-            
-            function playRound(computerChoice, playerChoice)
-            {
-                playerChoice = playerChoice.toLowerCase();
+        <div class = "header">Rock Paper Scissors</div>
 
-                if(computerChoice === "Rock")
-                {
-                    switch(playerChoice)
-                    {
-                        case "rock":
-                            return "tie";
-                        case "paper":
-                            return "win";
-                        case "scissors":
-                            return "lose";
-                    }
-                }
-                if(computerChoice === "Paper")
-                {
-                    switch(playerChoice)
-                    {
-                        case "rock":
-                            return "lose";
-                        case "paper":
-                            return "tie";
-                        case "scissors":
-                            return "win";
-                    }
-                }
-                if(computerChoice === "Scissors")
-                {
-                    switch(playerChoice)
-                    {
-                        case "rock":
-                            return "win";
-                        case "paper":
-                            return "lose";
-                        case "scissors":
-                            return "tie";
-                    }
-                }
-            }
+        <div class = "display">
+            <div class = "your-choice">Your Choice: </div>
+            <div class = "result"></div>
+            <div class = "cmp-choice">Computer Choice: </div>
+        </div>
 
-            function game()
-            {
-                let playerScore = 0;
-                let computerScore = 0;
+        <div class = "scoreboard">
+            <div class = "your-score">0</div>
+            <div class = "cmp-score">0</div>
+        </div>
 
-                for(let i = 0; i < 5; i++)
-                {
-                    let playerChoice = prompt("Rock, paper or scissors? : ");
-                    let result =playRound(getComputerChoice(), playerChoice);
-                    console.log(result);
-                    if(result === "win")
-                    {
-                        playerScore++;
-                    }
-                    if(result === "lose")
-                    {
-                        computerScore++;
-                    }
-                    if(result === "tie")
-                    {
-                        i--;
-                    }
-                                    
-                    console.log(`Score \n Computer Score: ${computerScore} Player Score: ${playerScore}`);
-                }
-                if(playerScore > computerScore)
-                {
-                    console.log("You WIN! Congrats!");
-                }
-                else 
-                {
-                    console.log("You lost. Try again!");
-                }
-            }
-            game();
-        </script>
+        <div class = "buttons">
+            <button class = "rock"><img src = "images/rock.png" alt = "rock"/></button>
+            <button class = "paper"><img src = "images/paper.png" alt = "paper"/></button>
+            <button class = "scissors"><img src = "images/scissors.png" alt = "scissors"/></button>
+        </div>
+
+        <button class = "reset">Reset</button>
     </body>
 </html>
